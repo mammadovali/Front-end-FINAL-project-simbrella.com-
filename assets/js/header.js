@@ -92,3 +92,4 @@ mobileExecutive.addEventListener("click", () => {
 teamClose.addEventListener("click", () => {
   teamSection.classList.remove("mobile-team");
 });
+

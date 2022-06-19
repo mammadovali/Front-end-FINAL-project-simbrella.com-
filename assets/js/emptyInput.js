@@ -1,35 +1,19 @@
-// Border red if input is empty (investors)
 
-let inputs = document.querySelectorAll(".vacancy-input");
+// Border red if input is empty
 
+const links = document.querySelectorAll(".link-red");
 
-let subbtn = document.getElementById("apply-button");
+const inputs = document.querySelectorAll(".input-check");
 
-subbtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  inputs.forEach((item) => {
-    if (item.value.trim() == "") {
-      item.classList.add("input-error");
-    } else {
-      item.classList.remove("input-error");
-    }
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    inputs.forEach((input) => {
+      if (input.value.trim() == "") {
+        input.classList.add("input-error");
+      } else {
+        input.classList.remove("input-error");
+      }
+    });
   });
 });
-
-// Border red if input is empty (investors)
-
-
-// Displaying file name on input 
-
-let fileInput = document.querySelector("#file");
-let label = document.querySelector("#label");
-
-fileInput.addEventListener("change", (e) => {
-  fileInput = e.target;
-  let fileName = fileInput.files[0].name;
-  label.textContent = fileName;
-});
-
-
-
-
