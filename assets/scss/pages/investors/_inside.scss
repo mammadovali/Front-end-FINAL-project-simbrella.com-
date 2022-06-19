@@ -1,0 +1,462 @@
+.bc-investors {
+  background-image: url(https://www.simbrella.com/site/templates/img/vacancy_bg.jpg);
+}
+
+.first__text {
+  @include betweenTwoDimension(240px, 1023px) {
+    padding: 20px 20px;
+  }
+}
+
+.story {
+  padding: 90px 0;
+  background-color: #f6f8fe;
+  overflow: hidden;
+
+  @include betweenTwoDimension(480px, 1023px) {
+    padding: 40px 0px;
+  }
+
+  @include betweenTwoDimension(240px, 479px) {
+    padding: 30px 0px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-direction: row;
+
+    @include betweenTwoDimension(240px, 1023px) {
+      display: block;
+    }
+
+    &__part {
+      width: calc(50% - 15px);
+
+      @include betweenTwoDimension(240px, 1023px) {
+        width: 100%;
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+
+      &__info {
+        min-height: 626px;
+
+        @include betweenTwoDimension(240px, 1023px) {
+          min-height: 1px;
+        }
+
+        &__text {
+          @include betweenTwoDimension(240px, 767px) {
+            font-size: 16px;
+          }
+
+          &__h2 {
+            padding: 0 0 24px;
+            font-weight: bold;
+            font-size: 56px;
+            line-height: 1.29;
+            letter-spacing: 0.01em;
+            color: #2d3192;
+
+            @include betweenTwoDimension(768px, 1023px) {
+              padding: 0 0 16px;
+              font-size: 36px;
+            }
+
+            @include betweenTwoDimension(480px, 767px) {
+              padding: 0 0 16px;
+              font-size: 32px;
+            }
+
+            @include betweenTwoDimension(240px, 479px) {
+              padding: 0 0 16px;
+              font-size: 27px;
+            }
+          }
+
+          &__p {
+            padding: 0 0 24px;
+            font-size: 18px;
+            line-height: 1.56;
+            color: #222;
+
+            @include betweenTwoDimension(240px, 767px) {
+              padding: 0 0 16px;
+            }
+          }
+        }
+      }
+
+      &__year {
+        // width: 100%;
+        height: 700px;
+        text-align: center;
+        position: relative;
+
+        @include betweenTwoDimension(768px, 1023px) {
+          height: 500px;
+        }
+
+        @include betweenTwoDimension(240px, 767px) {
+          height: 80vw;
+        }
+
+        &::before {
+          content: "";
+          width: 100px;
+          height: 100px;
+          position: absolute;
+          bottom: 36px;
+          left: calc(50% - 100px);
+          border: none;
+          border-right: 2px solid #2d3192;
+          border-bottom: 2px solid #2d3192;
+          border-bottom-right-radius: 100%;
+        }
+
+        &:nth-child(2)::before {
+          left: calc(50% - 0px);
+          top: 36px;
+          transform: rotate(180deg);
+        }
+
+        &:nth-child(2):after {
+          content: "";
+          display: block;
+          width: calc(100% - 170px);
+          height: 2px;
+          background-color: #2d3192;
+          position: absolute;
+          left: calc(50% + 100px);
+          top: 36px;
+
+          @media only screen and (max-width: 1023px) {
+            display: none;
+          }
+        }
+
+        @media only screen and (max-width: 1023px) {
+          &::before {
+            display: none;
+          }
+        }
+
+        &__full-circle {
+          width: 424px;
+          height: 424px;
+          border: 2px solid #2d3192;
+          position: absolute;
+          left: calc(50% - 212px);
+          top: calc(50% - 212px);
+          border-radius: 50%;
+
+          @include betweenTwoDimension(240px, 767px) {
+            width: 60vw;
+            height: 60vw;
+            left: calc(50% - 30vw);
+            top: calc(50% - 30vw);
+          }
+        }
+
+        &__empty-circle {
+          width: 424px;
+          height: 424px;
+          border: 2px solid #2d3192;
+          position: absolute;
+          left: calc(100% + 60px);
+          top: calc(50% - 212px);
+          border-radius: 50%;
+        }
+
+        &__span {
+          font-weight: bold;
+          font-size: 210px;
+          line-height: 700px;
+          text-align: center;
+          letter-spacing: 0.01em;
+          color: #ff931e;
+          position: relative;
+
+          @include betweenTwoDimension(768px, 1023px) {
+            line-height: 500px;
+          }
+
+          @include betweenTwoDimension(240px, 767px) {
+            line-height: 80vw;
+            font-size: 30vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.conformity {
+  padding: 90px 0;
+  background-color: #f6f8fe;
+  overflow: hidden;
+
+  @include betweenTwoDimension(480px, 1023px) {
+    padding: 40px 0px;
+  }
+
+  @include betweenTwoDimension(240px, 479px) {
+    padding: 30px 0px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include betweenTwoDimension(240px, 1023px) {
+      display: block;
+    }
+
+    &__left {
+      width: calc(50% - 15px);
+
+      @include betweenTwoDimension(240px, 1023px) {
+        width: 100%;
+        padding: 0 0 24px;
+      }
+
+      &__info {
+        font-size: 18px;
+        line-height: 1.56;
+        color: #222;
+
+        @include betweenTwoDimension(240px, 767px) {
+          font-size: 16px;
+        }
+
+        &__h2 {
+          padding: 0 0 40px;
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 1.33;
+          letter-spacing: 0.01em;
+          color: #222;
+
+          @include betweenTwoDimension(768px, 1023px) {
+            padding: 0 0 16px;
+            font-size: 36px;
+          }
+
+          @include betweenTwoDimension(480px, 767px) {
+            padding: 0 0 16px;
+            font-size: 32px;
+          }
+
+          @include betweenTwoDimension(240px, 479px) {
+            padding: 0 0 16px;
+            font-size: 27px;
+          }
+        }
+
+        &__p {
+          padding: 0 0 40px;
+
+          @include betweenTwoDimension(240px, 767px) {
+            padding: 0 0 16px;
+          }
+        }
+
+        &__ul {
+          list-style: none;
+
+          &__li {
+            margin: 0 0 24px;
+            padding: 0 0 0 21px;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 8px;
+              height: 8px;
+              background-color: #ff931e;
+              position: absolute;
+              left: 0;
+              top: 10px;
+              border-radius: 50%;
+            }
+
+            @include betweenTwoDimension(240px, 767px) {
+              margin: 0 0 16px;
+            }
+          }
+        }
+      }
+    }
+
+    &__right {
+      width: calc(50% - 15px);
+
+      @include betweenTwoDimension(240px, 1023px) {
+        width: 100%;
+      }
+
+      &__container {
+        box-shadow: 0 2px 0 0 #2d3192;
+        padding: 48px;
+        border: 2px solid #2d3192;
+        background-color: #fff;
+        border-radius: 24px;
+
+        @include betweenTwoDimension(240px, 767px) {
+          padding: 24px;
+        }
+
+        &__form {
+          &__h3 {
+            padding: 0 0 32px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.56;
+            color: #222;
+
+            @include betweenTwoDimension(240px, 479px) {
+              padding: 0 0 16px;
+              font-size: 16px;
+            }
+          }
+
+          &__double-input {
+            padding: 0 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include betweenTwoDimension(240px, 479px) {
+              display: flex;
+              flex-direction: column;
+            }
+
+            &__input {
+              height: 56px;
+              padding: 0 20px;
+              border: 1px solid #dddee1;
+              font-size: 16px;
+              color: #000;
+              border-radius: 12px;
+              width: calc(50% - 10px);
+              transition: all 0.3s linear;
+
+              &::placeholder {
+                color: #999999;
+              }
+
+              &:focus {
+                outline: none;
+                border: 1px solid #2d3192;
+                transition: all 0.3s linear;
+              }
+
+              @include betweenTwoDimension(240px, 479px) {
+                width: 100%;
+
+                &:first-child {
+                  margin: 0 0 24px;
+                }
+              }
+            }
+          }
+
+          &__single-input {
+            padding: 0 0 24px;
+
+            &__input {
+              width: 100%;
+              height: 56px;
+              padding: 0 20px;
+              border: 1px solid #dddee1;
+              font-size: 16px;
+              color: #000;
+              border-radius: 12px;
+              transition: all 0.3s linear;
+
+              &::placeholder {
+                color: #999999;
+              }
+
+              &:focus {
+                outline: none;
+                border: 1px solid #2d3192;
+                transition: all 0.3s linear;
+              }
+            }
+
+            &__text-area {
+              width: 100%;
+              height: 140px;
+              padding: 16px 20px;
+              border: 1px solid #dddee1;
+              font-size: 16px;
+              color: #000;
+              border-radius: 12px;
+              resize: none;
+              font-family: Arial, Helvetica, sans-serif;
+              transition: all 0.3s linear;
+
+              &:focus {
+                outline: none;
+                border: 1px solid #2d3192;
+                transition: all 0.3s linear;
+              }
+            }
+          }
+
+          &__button {
+            text-align: right;
+
+            &__send-form {
+              width: calc(50% - 15px);
+              height: 64px;
+              padding: 0 48px 0 24px;
+              border: none;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 64px;
+              color: #fff;
+              text-align: left;
+              text-decoration: none;
+              background-color: #ff931e;
+              background-repeat: no-repeat;
+              background-position: calc(100% - 24px) 50%;
+              background-image: url(https://www.simbrella.com/site/templates/img/link_white_arrow.svg);
+              border-radius: 12px;
+              cursor: pointer;
+              position: relative;
+
+              @include betweenTwoDimension(240px, 479px) {
+                width: 100%;
+              }
+
+              &__a {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;
+                color: #fff;
+                top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.input-error {
+  outline: none;
+  border: 1px solid red;
+}

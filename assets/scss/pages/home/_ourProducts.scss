@@ -1,0 +1,289 @@
+.our-products {
+  padding: 60px 0;
+  background-color: #2d3192;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(https://www.simbrella.com/site/templates/img/products_bg.svg);
+  background-size: cover;
+
+  @include betweenTwoDimension(240px, 767px) {
+    padding: 30px 0 20px;
+  }
+
+  &__wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &__h2 {
+      padding: 0 0 60px;
+      font-weight: 600;
+      font-size: 56px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+
+      @include betweenTwoDimension(240px, 767px) {
+        padding: 0 0 16px;
+        font-size: 27px;
+      }
+    }
+
+    &__circle {
+      width: 618px;
+      height: 624px;
+      margin: 0 auto;
+      position: relative;
+
+      @include betweenTwoDimension(480px, 767px) {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px 20px;
+      }
+
+      @include betweenTwoDimension(24px, 479px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 10px;
+        width: 100%;
+        height: 390px;
+      }
+
+      &__item {
+        @include betweenTwoDimension(240px, 767px) {
+          height: auto !important;
+          min-height: 90px !important;
+          width: auto !important;
+          position: static !important;
+        }
+      }
+
+      &__item-1 {
+        width: 210px;
+        height: 150px;
+        position: absolute;
+        left: calc(50% - 105px);
+        top: 0px;
+
+        &__a {
+          clip-path: url(#clip-1);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+        }
+      }
+
+      &__item-2 {
+        width: 202px;
+        height: 202px;
+        position: absolute;
+        left: 386px;
+        top: 31px;
+
+        &__a {
+          clip-path: url(#clip-2);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+
+          &__span {
+            margin: 15px 15px 0 0;
+          }
+        }
+      }
+
+      &__item-3 {
+        width: 150px;
+        height: 210px;
+        position: absolute;
+        left: 468px;
+        top: 208px;
+
+        &__a {
+          clip-path: url(#clip-3);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+        }
+      }
+
+      &__item-4 {
+        width: 202px;
+        height: 202px;
+        position: absolute;
+        left: 386px;
+        top: 390px;
+
+        &__a {
+          clip-path: url(#clip-4);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+
+          &__span {
+            margin: 0 15px 15px 0px;
+          }
+        }
+      }
+
+      &__item-5 {
+        width: 210px;
+        height: 150px;
+        position: absolute;
+        left: 204px;
+        top: 474px;
+
+        &__a {
+          clip-path: url(#clip-5);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+        }
+      }
+
+      &__item-6 {
+        width: 202px;
+        height: 202px;
+        position: absolute;
+        left: 28px;
+        top: 390px;
+
+        &__a {
+          clip-path: url(#clip-6);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+
+          &__span {
+            margin: 0 0 15px 15px;
+          }
+        }
+      }
+
+      &__item-7 {
+        width: 150px;
+        height: 210px;
+        position: absolute;
+        left: 0;
+        top: 208px;
+
+        &__a {
+          clip-path: url(#clip-7);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+        }
+      }
+
+      &__item-8 {
+        width: 202px;
+        height: 202px;
+        position: absolute;
+        left: 29px;
+        top: 31px;
+
+        &__a {
+          clip-path: url(#clip-8);
+
+          @include betweenTwoDimension(240px, 767px) {
+            clip-path: none !important;
+          }
+
+          &__span {
+            margin: 15px 0px 0 15px;
+          }
+        }
+      }
+
+      &__info-center {
+        &__p {
+          width: 270px;
+          height: auto;
+          font-size: 13px;
+          line-height: 1.54;
+          text-align: center;
+          letter-spacing: -0.02em;
+          color: #fff;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, calc(10px - 50%));
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.45s cubic-bezier(0.39, 0.575, 0.565, 1) 0s;
+
+          @include betweenTwoDimension(240px, 767px) {
+            padding: 18px;
+            background-color: #fff;
+            color: #2d3192;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #fff;
+  text-decoration: none;
+  background-color: #3595ee;
+  object-fit: cover;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  &:hover {
+    transform: scale(1.05);
+    color: #3595ee;
+    background-color: #fff;
+    transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+}
+
+.span {
+  padding: 0 15px;
+
+  @include betweenTwoDimension(240px, 479px) {
+    padding: 0 24px;
+    margin: 0 !important;
+  }
+
+  @include betweenTwoDimension(479px, 767px) {
+    margin: 0 !important;
+  }
+}
+
+.opa-half {
+  opacity: 0.5;
+}
+
+.show-me {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%);
+  transition-delay: 0.1s;
+}

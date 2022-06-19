@@ -1,0 +1,17 @@
+.footer {
+  &__bottom {
+    padding: 0 20px;
+  }
+}
+
+.all {
+  padding: 34px 0 34px;
+  background-image: none;
+  min-height: 1px;
+}
+
+.footer__bottom__site-by__a {
+  &:hover {
+    text-decoration: underline;
+  }
+}

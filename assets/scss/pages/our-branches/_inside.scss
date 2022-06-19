@@ -1,0 +1,98 @@
+.branches {
+  padding: 100px 0;
+  background: #f6f8fe;
+
+  @include betweenTwoDimension(768px, 1023px) {
+    padding: 40px 0 40px;
+  }
+
+  @include betweenTwoDimension(480px, 767px) {
+    padding: 30px 0 40px;
+  }
+
+  @include betweenTwoDimension(240px, 479px) {
+    padding: 20px 0 40px;
+  }
+  &__wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 30px 30px;
+
+      @include betweenTwoDimension(768px, 1023px) {
+        padding: 20px 20px;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include betweenTwoDimension(240px, 767px) {
+        padding: 20px;
+        grid-template-columns: 1fr;
+      }
+
+      &__branch {
+        padding: 40px 40px 40px;
+        border: 1px solid #e6e6e6;
+        background: #fff;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 40px) calc(100% - 40px);
+        border-radius: 4px;
+        min-height: 410px;
+
+        @include betweenTwoDimension(480px, 767px) {
+          min-height: 1px;
+          padding: 30px 30px 100px;
+        }
+
+        @include betweenTwoDimension(240px, 479px) {
+          min-height: 1px;
+          padding: 20px 20px 100px;
+        }
+
+        &__h2 {
+          padding: 0 0 32px;
+          font-weight: bold;
+          font-size: 32px;
+          line-height: 1.5;
+          letter-spacing: 0.01em;
+          color: #ff931e;
+
+          @include betweenTwoDimension(240px, 767px) {
+            font-size: 27px;
+          }
+        }
+
+        &__dl {
+          &__dt {
+            padding: 0 0 8px;
+            font-size: 14px;
+            line-height: 1.71;
+            color: #99a3b2;
+          }
+
+          &__dd {
+            min-height: 72px;
+            padding: 0 0 24px;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #000;
+
+            &:last-child {
+              min-height: 1px;
+              padding: 0;
+            }
+
+            &__link {
+              text-decoration: none;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.first {
+  height: 300px;
+
+  @include betweenTwoDimension(240px, 479px) {
+    padding: 120px 0 30px !important;
+  }
+
+  @include betweenTwoDimension(480px, 767px) {
+    height: 270px !important;
+    padding: 0 0 30px;
+  }
+
+  @include betweenTwoDimension(768px, 1023px) {
+    height: 320px !important;
+    padding: 0 0 40px;
+  }
+
+  &__image {
+    background-image: url(https://www.simbrella.com/site/templates/img/vacancies_header_bg.svg);
+    background-color: #0c0d26;
+    height: 300px;
+  }
+
+  &__text {
+    padding: 70px 20px;
+
+    &__h1 {
+      @include betweenTwoDimension(768px, 1023px) {
+        padding: 0 0 20px;
+        font-size: 24px;
+      }
+
+      @include betweenTwoDimension(480px, 767px) {
+        font-size: 27px;
+      }
+
+      @include betweenTwoDimension(240px, 479px) {
+        font-size: 32px;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+//Reset
+@import "./reset";
+
+// Variables
+@import "./variables";
+
+// Mixins
+@import "./mixins";
+
+// Components
+@import "./components/home/header";
+@import "./components/home/footer";
+
+@import "./components/what-we-do/header";
+@import "./components/all-footers/allFooters.scss";
+@import "./components/news/header";
+@import "./components/home/asideNav";
+@import "./components/home/mobileDarkness";
+
+//Bootstrap
+@import "../bootstrap/scss/bootstrap-grid.scss";
+
+// AOS
+
+@import "node_modules/aos/src/sass/aos.scss";
+
+//Pages
+@import "./pages/home/whatwedo";
+@import "./pages/home/ourProducts";
+@import "./pages/home/tech";
+@import "./pages/home/achievments";
+@import "./pages/home/map";
+@import "./pages/home/mapMobile";
+@import "./pages/home/ourClients";
+@import "./pages/home/team";
+@import "./pages/home/workWithUs";
+@import "./pages/home/latestNews";
+@import "./pages/what-we-do/inside";
+@import "./pages/all-vacancies/inside";
+@import "./pages/news/inside";
+@import "./pages/news-details/inside";
+@import "./pages/our-branches/inside";
+@import "./pages/vacancy-details/inside";
+@import "./pages/investors/inside";

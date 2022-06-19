@@ -1,0 +1,344 @@
+.footer {
+  @media only screen and (min-height: 850px) {
+    min-height: 1px;
+  }
+
+  @include betweenTwoDimension(768px, 1023px) {
+    padding: 30px 0 30px;
+  }
+  @include betweenTwoDimension(480px, 767px) {
+    padding: 20px 0 20px;
+  }
+  @include betweenTwoDimension(240px, 479px) {
+    min-height: 1px;
+    padding: 20px 0 20px;
+  }
+
+  min-height: calc(100vh - 80px);
+  padding: 35px 0 25px;
+  background-image: url(https://www.simbrella.com/site/templates/img/footer_bg.svg);
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &__top {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include betweenTwoDimension(240ox, 767px) {
+      display: block;
+    }
+
+    &__h2 {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #fff;
+
+      @include betweenTwoDimension(1024px, 1280px) {
+        margin: -8px 0 0;
+      }
+
+      @include betweenTwoDimension(768px, 1023px) {
+        margin: -10px 0 0;
+        font-size: 32px;
+      }
+
+      @include betweenTwoDimension(480px, 767px) {
+        padding: 0 0 20px;
+        font-size: 27px;
+      }
+
+      @include betweenTwoDimension(240px, 479px) {
+        padding: 0 0 20px;
+        font-size: 24px;
+      }
+    }
+
+    &__right-side {
+      width: calc(100% - 360px);
+
+      @include betweenTwoDimension(768px, 1023px) {
+        width: calc(100% - 240px);
+      }
+
+      @include betweenTwoDimension(240px, 767px) {
+        width: 100%;
+      }
+
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 50px;
+        flex-wrap: wrap;
+
+        @include betweenTwoDimension(1023px, 1041px) {
+          display: flex;
+        }
+
+        @include betweenTwoDimension(1024px, 1280px) {
+          padding: 0 0 60px;
+        }
+
+        @include betweenTwoDimension(480px, 1023px) {
+          padding: 0 0 60px;
+        }
+
+        @include betweenTwoDimension(240px, 479px) {
+          padding: 0 0 30px;
+        }
+
+        &__nav {
+          font-size: 0;
+
+          @include betweenTwoDimension(1023px, 1041px) {
+            padding: 0 0 40px;
+          }
+
+          @include betweenTwoDimension(768px, 922px) {
+            padding: 0 0 40px;
+          }
+
+          @include betweenTwoDimension(240px, 680px) {
+            padding: 0 0 30px;
+          }
+
+          @include betweenTwoDimension(681px, 767px) {
+            padding: 0 0 30px;
+            padding-right: 200px;
+          }
+
+          &__ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+
+            &__li {
+              padding: 0 48px;
+              border-left: 1px solid #505050;
+
+              transition: all 0.15s linear;
+
+              // @include betweenTwoDimension(1015px, 1023px) {
+              //   padding: 0 50px;
+              // }
+
+              @include betweenTwoDimension(480px, 1280px) {
+                padding: 0 20px;
+              }
+
+              @include betweenTwoDimension(240px, 479px) {
+                padding: 0 10px;
+              }
+
+              &:first-child {
+                border-left: none;
+                padding-left: 0;
+              }
+
+              &__a {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 1.33;
+                letter-spacing: 0.01em;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: none;
+                transition: all 0.15s linear 0s;
+
+                &:focus,
+                &:hover {
+                  color: #ff931e;
+                  transition: all 0.15s linear 0s;
+                }
+
+                @include betweenTwoDimension(480px, 1280px) {
+                  font-size: 21px;
+                }
+
+                @include betweenTwoDimension(240px, 479px) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        &__link {
+          &__our-branches {
+            display: block;
+            height: 56px;
+            padding: 0 90px 0 24px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 56px;
+            color: #fff;
+            text-decoration: none;
+            box-shadow: inset 0 0 0 3px #dfe4eb;
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.15s linear;
+
+            &:hover {
+              box-shadow: inset 0 0 0 3px #ff931e;
+              transition: all 0.15s linear;
+            }
+
+            &:hover &__img {
+              position: absolute;
+              top: 22px;
+              left: 175px;
+              transition: all 0.15s linear;
+            }
+
+            &__img {
+              position: absolute;
+              top: 22px;
+              left: 170px;
+              transition: all 0.15s linear;
+            }
+          }
+        }
+      }
+
+      &__info {
+        &__description {
+          display: none;
+
+          &.current {
+            display: block;
+          }
+          &__part {
+            padding: 0 0 48px;
+
+            @include betweenTwoDimension(240px, 1023px) {
+              padding: 0 0 20px;
+            }
+
+            @include betweenTwoDimension(1024px, 1280px) {
+              padding: 0 0 30px;
+            }
+            &__span {
+              padding: 0 0 12px;
+              font-size: 18px;
+              line-height: 1.45;
+              color: rgba(255, 255, 255, 0.6);
+
+              @include betweenTwoDimension(240px, 767px) {
+                padding: 0 0 4px;
+                font-size: 14px;
+              }
+
+              @include betweenTwoDimension(768px, 1023px) {
+                padding: 0 0 8px;
+                font-size: 16px;
+              }
+              @include betweenTwoDimension(1024px, 1280px) {
+                padding: 0 0 8px;
+              }
+            }
+
+            &__p {
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 1.54;
+              color: #fff;
+
+              @include betweenTwoDimension(240px, 767px) {
+                font-size: 16px;
+              }
+              @include betweenTwoDimension(768px, 1023px) {
+                font-size: 18px;
+              }
+
+              &__a {
+                color: #fff;
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include betweenTwoDimension(768px, 1280px) {
+      padding: 40px 20px 0;
+    }
+
+    @include betweenTwoDimension(240px, 767px) {
+      display: block;
+      padding: 40px 20px 0;
+      text-align: center;
+    }
+
+    &__site-by {
+      display: flex;
+
+      @include betweenTwoDimension(240px, 767px) {
+        justify-content: center;
+      }
+
+      &__p {
+        padding: 0 10px 0 0;
+        font-size: 12px;
+        line-height: 2.67;
+        color: #fff;
+      }
+
+      &__a {
+        color: #fff;
+        text-decoration: none;
+        padding: 0 0 0 30px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 2.67;
+        position: relative;
+
+        &::before {
+          content: "";
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          background-image: url(https://www.simbrella.com/site/templates/img/jis_logo.svg);
+          background-position: 0px;
+          background-repeat: no-repeat;
+          top: 5px;
+          left: 0px;
+        }
+      }
+    }
+
+    &__copyright {
+      width: calc(100% - 360px);
+      font-size: 16px;
+      line-height: 1.5;
+      color: #999;
+
+      @include betweenTwoDimension(240px, 767px) {
+        width: 100%;
+        padding: 10px 0 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+.achievments {
+  padding: 60px 0 0px;
+  min-height: calc(100vh - 80px);
+
+  @media only screen and (min-height: 850px) {
+    min-height: 1px;
+  }
+
+  @include betweenTwoDimension(1024px, 1280px) {
+    padding: 35px 0 0px;
+    color: #2d3192;
+  }
+
+  @include betweenTwoDimension(768px, 1023px) {
+    padding: 35px 0 40px;
+  }
+  @include betweenTwoDimension(240px, 767px) {
+    padding: 30px 0;
+  }
+
+  &__wrapper {
+    max-width: 1080px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    &__h2 {
+      padding: 0 0 40px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+
+      @include betweenTwoDimension(1024px, 1280px) {
+        padding: 0 0 30px;
+      }
+
+      @include betweenTwoDimension(768px, 1023px) {
+        padding: 0 0 10px;
+        font-size: 32px;
+      }
+      @include betweenTwoDimension(480px, 767px) {
+        padding: 0 0 10px;
+        font-size: 27px;
+      }
+
+      @include betweenTwoDimension(240px, 479px) {
+        padding: 0 0 10px;
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+
+    &__figures {
+      display: flex;
+      justify-content: space-between;
+      padding: 90px 0;
+
+      @include betweenTwoDimension(1024px, 1280px) {
+        padding: 30px 0;
+      }
+
+      @include betweenTwoDimension(768px, 1023px) {
+        padding: 40px 0;
+      }
+      @include betweenTwoDimension(240px, 767px) {
+        display: block;
+        padding: 0px 0;
+        border: none !important;
+      }
+
+      &__item {
+        width: calc(33.333% - 20px);
+
+        @include betweenTwoDimension(768px, 1023px) {
+          width: calc(33.333% - 10px);
+        }
+
+        @include betweenTwoDimension(480px, 767px) {
+          width: 100%;
+          padding: 20px 0;
+        }
+
+        @include betweenTwoDimension(240px, 479px) {
+          width: 100%;
+          padding: 20px 0;
+          text-align: center;
+        }
+
+        &__h3 {
+          padding: 0 0 8px;
+          font-weight: bold;
+          font-size: 48px;
+          line-height: 1;
+          letter-spacing: 0.02em;
+          color: #ff931e;
+
+          @include betweenTwoDimension(1024px, 1280px) {
+            font-size: 48px;
+          }
+
+          @include betweenTwoDimension(480px, 1023px) {
+            font-size: 32px;
+          }
+
+          @include betweenTwoDimension(240px, 479px) {
+            padding: 0 0 6px;
+            font-size: 27px;
+          }
+        }
+
+        &__p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 1.86;
+          text-transform: uppercase;
+          color: #222;
+
+          @include betweenTwoDimension(240px, 479px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.world {
+  padding: 0px 0 60px;
+  position: relative;
+
+  @include betweenTwoDimension(240px, 1023px) {
+    display: none;
+  }
+
+  &__wrapper {
+    max-width: 1280px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    &__map-svg {
+      padding: 0px 0 0;
+      margin: -120px 0 0;
+      user-select: none;
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 140px;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+
+      &__map-inner {
+        &__svg {
+          user-select: none;
+          width: 100%;
+          height: auto;
+          position: relative;
+          transform-origin: 0px 0px;
+          max-width: none !important;
+          max-height: none !important;
+          transition: transform 0.4s ease 0s;
+          cursor: pointer;
+        }
+      }
+
+      &__flying-country {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 0 10px;
+        background: #fff;
+        border-radius: 8px 8px 8px 0;
+        position: absolute;
+
+        &__img {
+          width: 24px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        &__span {
+          padding: 0 0 0 6px;
+          font-weight: bold;
+          font-size: 16px;
+          // height: 35px;
+          line-height: 1;
+          letter-spacing: 0.01em;
+          color: #222;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0 0;
+            border-color: #fff transparent transparent transparent;
+            position: absolute;
+            left: 0;
+            top: 100%;
+          }
+        }
+      }
+    }
+
+    &__inner {
+      width: 100%;
+      height: 0;
+      padding: 0px 20px 0px;
+      position: absolute;
+      left: 0px;
+      top: 80px;
+
+      &__h2 {
+        height: 0;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 1.29;
+        letter-spacing: 0.01em;
+        color: #2d3192;
+      }
+    }
+
+    &__operators-info {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 0;
+      padding: 0 20px;
+      position: absolute;
+      left: 0;
+      bottom: 160px;
+
+      &__wrapper {
+        display: block;
+        padding: 27px;
+        border: 1px solid #d3d8e7;
+        border-radius: 4px;
+
+        &__p {
+          margin: 0 0 16px;
+          padding: 0 0 0 30px;
+          font-size: 16px;
+          line-height: 1.5;
+          text-transform: capitalize;
+          color: #222;
+          position: relative;
+
+          &::before {
+            content: "";
+            // display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: calc(50% - 10px);
+            opacity: 0.3;
+          }
+
+          &::after {
+            content: "";
+            // display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            left: 7px;
+            top: calc(50% - 3px);
+          }
+
+          &:first-child::before,
+          &:first-child::after {
+            background: #ff931e;
+          }
+
+          &:nth-child(2)::before,
+          &:nth-child(2)::after {
+            background: #2d3192;
+          }
+
+          &:nth-child(3)::before {
+            opacity: 1;
+            background: url(https://www.simbrella.com/site/templates/img/both_icon.svg)
+              no-repeat 50%;
+            background-size: 24px;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.show-country {
+  display: flex;
+}
+
+// .circle-country {
+//   display: none;
+//   justify-content: center;
+//   align-items: center;
+//   height: 35px;
+//   padding: 0 10px;
+//   background: #fff;
+//   border-radius: 8px 8px 8px 0;
+//   position: absolute;
+// }
+
+// .country-info {
+//   // display: none;
+//   // position: relative;
+
+//   &__img {
+//     width: 24px;
+//     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+//   }
+
+//   &__text {
+//     padding: 0 0 0 6px;
+//     font-weight: bold;
+//     font-size: 16px;
+//     line-height: 1;
+//     letter-spacing: 0.01em;
+//     color: #222;
+//   }
+// }

@@ -1,0 +1,124 @@
+.clients {
+  padding: 35px 0 60px;
+  background: #f6f8fe;
+
+  @media only screen and (min-height: 850px) {
+    min-height: 1px;
+  }
+
+  @include betweenTwoDimension(1024px, 1280px) {
+    padding: 35px 0 60px;
+  }
+
+  @include betweenTwoDimension(768px, 1023px) {
+    padding: 35px 0 40px;
+  }
+  @include betweenTwoDimension(240px, 767px) {
+    padding: 30px 0;
+  }
+
+  &__wrapper {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    &__h2 {
+      padding: 0 0 30px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.29;
+      letter-spacing: 0.01em;
+      color: #2d3192;
+
+      @include betweenTwoDimension(1024px, 1280px) {
+        padding: 0 0 30px;
+      }
+
+      @include betweenTwoDimension(768px, 1023px) {
+        padding: 0 0 30px;
+        font-size: 32px;
+      }
+      @include betweenTwoDimension(480px, 767px) {
+        padding: 0 0 20px;
+        font-size: 27px;
+      }
+
+      @include betweenTwoDimension(240px, 479px) {
+        padding: 0 0 20px;
+        font-size: 24px;
+      }
+    }
+
+    &__companies {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 30px 30px;
+
+      @include betweenTwoDimension(1024px, 1280px) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @include betweenTwoDimension(768px, 1023px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px 20px;
+      }
+      @include betweenTwoDimension(480px, 767px) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 10px;
+      }
+
+      @include betweenTwoDimension(240px, 479px) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 10px;
+      }
+
+      &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 160px;
+        margin: 0;
+        border: 1px solid #d5dde4;
+        background: #fff;
+        position: relative;
+        border-radius: 4px;
+
+        &__img {
+          max-height: 90px;
+          max-width: calc(100% - 60px);
+        }
+
+        &__more {
+          // width: 100%;
+          // height: 100%;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 1.8;
+          text-align: center;
+          letter-spacing: 0.01em;
+          // color: #fff;
+          // position: absolute;
+          // left: 0;
+          // top: 0;
+
+          @include betweenTwoDimension(480px, 767px) {
+            font-size: 21px;
+          }
+          @include betweenTwoDimension(240px, 479px) {
+            font-size: 18px;
+          }
+        }
+
+        &__span {
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          padding: 0 20px;
+          border: 1px solid #d5dde4;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
